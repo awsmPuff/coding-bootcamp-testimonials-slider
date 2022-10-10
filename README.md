@@ -24,13 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots)
+![](./screenshots/desktop.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/coding-bootcamp-testimonials-slider-using-flexbox-TlhYYpx_1y](https://your-solution-url.com)
+- Live Site URL: [https://awsmpuff.github.io/coding-bootcamp-testimonials-slider/](https://your-live-site-url.com)
 
 ## My process
 
