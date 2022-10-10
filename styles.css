@@ -1,0 +1,218 @@
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html {
+    font-size: 32px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    color: var(--dark-blue);
+    background: url(./images/pattern-bg.svg) no-repeat;
+    background-size: 50% 85%;
+    background-position: 90% 60%;
+    position: relative;
+}
+h1 {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+p {
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: var(--grayish-blue);
+}
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.quotes {
+    position: absolute;
+    top: -70px;
+    left: 100px;
+}
+
+main {
+    display: flex;
+    width: 70%;
+    height: 16rem;
+}
+section > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.left {
+    width: calc(100% - 15rem);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+section.left .intro {
+    position: absolute;
+    width: 110%;
+    z-index: 5;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+section.left .intro article {
+    line-height: 1.3rem;
+}
+section.left .intro .person {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+section.right {
+    width: 15rem;
+    position: relative;
+}
+section.right .pic > img {
+    width: 16rem;
+    height: 100%;
+    box-shadow: 0 0.6rem 1.8rem 0 rgba(121, 134, 170, 0.563);
+}
+section.right .page {
+    position: absolute;
+    display: flex;
+    width: 3.5rem;
+    height: 1.5rem;
+    border-radius: 1.3rem;
+    bottom: -0.4rem;
+    left: 1.9rem;
+    background-color: white;
+    cursor: pointer;
+}
+section.right .page > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: 0.2s ease;
+}
+section.right .page > div:hover {
+    background-color: var(--grayish-blue);
+}
+section.right .page > div:hover img {
+    filter: brightness(0) invert(1);
+}
+section.right .page > div img {
+    width: 0.3rem;
+    height: 0.5rem;
+}
+section.right .page .prev {
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+section.right .page .next {
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+}
+
+.intro {
+    display: none;
+}
+.active-intro {
+    display: flex;
+}
+.pic {
+    display: none;
+}
+.active-pic {
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 26px;
+    }
+    body {
+        background-size: 95% 13rem;
+        background-position: 5% 13%;
+    } 
+    h1 {
+        font-size: 0.7rem;
+    }
+    p {
+        font-size: 0.6rem;
+    }
+    .curve {
+        width: 75%;
+        height: 3.5rem;
+    }
+    .quotes {
+        width: 25%;
+        top: -25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    main {
+        flex-direction: column;
+        width: 80%;
+        height: max-content;
+        gap: 2.6rem;
+    }
+    section > div {
+        justify-content: center;
+    }
+    section.left {
+        width: 100%;
+        order: 2;
+    }
+    section.left .intro {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        align-items: center;
+    }
+    section.left .intro article {
+        width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    section.left .intro .person {
+        flex-direction: column;
+    }
+    section.right {
+        order: 1;
+        width: 100%;
+    }
+    section.right .pic {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    section.right .pic > img {
+        width: 90%;
+        height: 10.5rem;
+    }
+    section.right .page {
+        width: 3.4rem;
+        height: 1.6rem;
+        bottom: -0.5rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
